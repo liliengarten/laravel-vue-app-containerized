@@ -8,11 +8,11 @@
 Для первого запуска скопируйте в терминал следующее:
 ```shell
 git clone https://github.com/liliengarten/laravel-vue-app-containerized
-cd laravel-vue-app-containerized/dev | laravel-vue-app-containerized/prod (в зависимости от нужной сборки) 
+cd laravel-vue-app-containerized/deploy/dev | laravel-vue-app-containerized/deploy/prod (в зависимости от нужной сборки) 
 docker compose up --build
 ```
 Для всех последующих запусков достаточно скопировать в терминал следующее:
 ```shell
-cd laravel-vue-app-containerized/dev | laravel-vue-app-containerized/prod (в зависимости от нужной сборки) 
+cd laravel-vue-app-containerized/deploy/dev | laravel-vue-app-containerized/deploy/prod (в зависимости от нужной сборки) 
 docker compose up
 ```
