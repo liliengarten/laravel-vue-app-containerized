@@ -21,7 +21,8 @@ services:
 
   backend:
     build:
-      context: ./backend
+      context: ../..
+      dockerfile: ./deploy/prod/backend/Dockerfile
     container_name: ${BACKEND_CONTAINER_NAME}
     environment:
       DB_HOST: ${DB_HOST}
@@ -37,7 +38,8 @@ services:
 
   nginx:
     build:
-      context: ./frontend
+      context: ../..
+      dockerfile: ./deploy/prod/frontend/Dockerfile
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf
     ports:

@@ -2,11 +2,11 @@ FROM node:25-alpine AS dist
 
 WORKDIR /app
 
-COPY ../../../frontend/package*.json ./
+COPY ./frontend/package*.json ./
 
 RUN npm i
 
-COPY ../../../frontend .
+COPY ./frontend .
 
 RUN ["npm", "run", "build"]
 
