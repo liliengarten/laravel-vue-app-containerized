@@ -23,7 +23,6 @@ services:
     image: dpage/pgadmin4:9
     container_name: ${PGADMIN_CONTAINER_NAME}
     environment:
-      PGADMIN_LISTEN_ADDRESS: 0.0.0.0
       PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL}
       PGADMIN_DEFAULT_PASSWORD: ${DB_PASSWORD}
     networks:
@@ -39,8 +38,6 @@ services:
     container_name: ${BACKEND_CONTAINER_NAME}
     environment:
       DB_HOST: ${DB_HOST}
-      DB_USERNAME: ${DB_USERNAME} 
-      DB_PASSWORD: ${DB_PASSWORD}
     expose:
       - ${BACKEND_PORT}
     networks:

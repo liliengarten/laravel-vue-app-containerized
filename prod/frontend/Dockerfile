@@ -1,4 +1,4 @@
-FROM node:25-alpine
+FROM node:25-alpine AS dist
 
 WORKDIR /app
 
@@ -8,4 +8,8 @@ RUN npm i
 
 COPY . .
 
-CMD ["npm", "run", "build"]
+RUN ["npm", "run", "build"]
+
+FROM nginx:stable-alpine
+
+COPY --from=dist /app/dist /usr/share/nginx/html
