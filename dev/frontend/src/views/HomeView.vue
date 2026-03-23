@@ -4,7 +4,7 @@ import { ref, onMounted } from 'vue';
 const users = ref({})
 
 const createUser = async () => {
-  await fetch("/api/users", {
+  await fetch("http://localhost:8080/api/users", {
     method: "POST"
   });
 
@@ -12,7 +12,7 @@ const createUser = async () => {
 }
 
 const getUsers = async () => {
-  const response = await fetch("/api/users", {
+  const response = await fetch("http://localhost:8080/api/users", {
     method: "GET"
   });
 

@@ -8,8 +8,4 @@ RUN npm i
 
 COPY . .
 
-RUN ["npm", "run", "build"]
-
-FROM nginx:stable-alpine
-
-COPY --from=dist /app/dist /usr/share/nginx/html
+CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
