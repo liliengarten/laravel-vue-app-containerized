@@ -9,7 +9,7 @@
 ```shell
 git clone https://github.com/liliengarten/laravel-vue-app-containerized
 cd laravel-vue-app-containerized/deploy/dev | laravel-vue-app-containerized/deploy/prod (в зависимости от нужной сборки) 
-docker compose up --build
+docker compose up -d --build
 ```
 Для всех последующих запусков достаточно скопировать в терминал следующее:
 ```shell
